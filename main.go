@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
 
 	/*
@@ -25,5 +29,27 @@ func main() {
 	}
 
 	/*
-	 */
+	  Now you can define variable as the (struct) datatype of 'employee'
+	*/
+	var david employee
+	fmt.Println(david) // prints {0    0 false}  // i.e. default string and int values
+
+	// To print a particular field we use the . operator, to drill down
+	fmt.Println(david.ID) // 0
+	// here's how to set/override a field
+	david.ID = 10
+	fmt.Println(david)    // prints {10    0 false}
+	fmt.Println(david.ID) // prints 10
+
+	// Here's the more common way to initailise+declare a struct datatype
+	Charlie := employee{
+		ID:        23,
+		Title:     "Mr",
+		FirstName: "Charles",
+		Lastname:  "Dickens",
+		Age:       55,
+		Smoker:    true,
+	}
+
+	fmt.Println(Charlie) // prints {23 Mr Charles Dickens 55 true}
 }
