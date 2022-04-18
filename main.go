@@ -62,4 +62,15 @@ func main() {
 	fmt.Println(john) // {34 Dr John Smith 30 false}
 	// However this approach is bad practice because it is harder to read the code.
 
+	// Theres two syntax to construct an array of structs. Here I'm showing boths syntax in a combined example:
+	employees := []employee{{
+		ID:        23,
+		Title:     "Mr",
+		FirstName: "Charles",
+		Lastname:  "Dickens",
+		Age:       55,
+		Smoker:    true,
+	}, david, john}
+	fmt.Println(employees)
+
 }
